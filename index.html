@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Plan de correlativas — Ingeniería en Computación, FCEFyN UNC">
+  <meta name="theme-color" content="#06040d">
+  <title>Correlativas · Ing. Computación</title>
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✦</text></svg>">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/effects.css">
+</head>
+<body>
+
+  
+  <canvas id="starfield" aria-hidden="true"></canvas>
+  <div class="nebula-ambient nebula-ambient--top"    aria-hidden="true"></div>
+  <div class="nebula-ambient nebula-ambient--bottom" aria-hidden="true"></div>
+  <div id="nebula-cursor" aria-hidden="true"></div>
+  <div id="cursor-dot"    aria-hidden="true"></div>
+
+  
+  <div
+    id="toast"
+    role="status"
+    aria-live="polite"
+    aria-atomic="true"
+    class="toast"
+  ></div>
+
+  <div class="page-wrapper">
+
+    <header class="site-header">
+      <span class="header-eyebrow">FCEFyN · UNC</span>
+      <h1 class="header-title">Ing. en <em>Computación</em></h1>
+      <p class="header-subtitle">Plan de correlativas</p>
+    </header>
+
+    <main class="main-scroll">
+      <div
+        id="main-grid"
+        class="main-grid"
+        role="region"
+        aria-label="Mapa de materias por año"
+      ></div>
+    </main>
+
+    <footer class="site-footer">
+
+      <div class="legend" aria-label="Referencias">
+        <div class="legend-item">
+          <span class="legend-dot legend-dot--available" aria-hidden="true"></span>
+          Disponible
+        </div>
+        <div class="legend-item">
+          <span class="legend-dot legend-dot--approved" aria-hidden="true"></span>
+          Aprobada
+        </div>
+        <div class="legend-item">
+          <span class="legend-dot legend-dot--locked" aria-hidden="true"></span>
+          Bloqueada
+        </div>
+      </div>
+
+      <div class="progress-section">
+        <div class="progress-meta">
+          <span id="progress-label" class="progress-label">0 / 42 materias</span>
+          <span id="progress-pct"   class="progress-pct">0%</span>
+        </div>
+        <div
+          class="progress-track"
+          role="progressbar"
+          aria-label="Progreso de la carrera"
+          aria-valuemin="0"
+          aria-valuemax="100"
+          aria-valuenow="0"
+          id="progress-track"
+        >
+          <div class="progress-fill" id="progress-fill"></div>
+        </div>
+      </div>
+
+    </footer>
+
+  </div>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

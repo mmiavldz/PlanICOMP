@@ -1,0 +1,75 @@
+
+
+:root {
+
+  /* ── Fondo y superficies ─────────────────────────────── */
+  --color-bg:               #06040d;
+  --color-surface:          rgba(255, 255, 255, 0.025);
+  --color-surface-hover:    rgba(255, 255, 255, 0.045);
+
+  /* ── Paleta rosa ─────────────────────────────────────── */
+  --color-rose-bright:      #e8739a;
+  --color-rose-mid:         #c74b7b;
+  --color-rose-deep:        #9d2f5c;
+  --color-rose-glow:        rgba(199, 75, 123, 0.22);
+  --color-rose-glow-soft:   rgba(157, 47, 92, 0.11);
+
+  /* ── Texto ───────────────────────────────────────────── */
+  --color-text:             #f4e2ee;
+  --color-text-dim:         rgba(244, 226, 238, 0.38);
+  --color-text-muted:       rgba(244, 226, 238, 0.20);
+
+  /* ── Estados de cards ────────────────────────────────── */
+  --card-available-bg:      rgba(199, 100, 150, 0.08);
+  --card-available-border:  rgba(199,  75, 123, 0.18);
+  --card-available-text:    var(--color-text);
+
+  --card-approved-from:     rgba(199, 75, 123, 0.88);
+  --card-approved-to:       rgba(157, 47,  92, 0.92);
+  --card-approved-border:   rgba(232, 115, 154, 0.30);
+  --card-approved-text:     white;
+
+  --card-locked-bg:         rgba(255, 255, 255, 0.020);
+  --card-locked-border:     rgba(255, 255, 255, 0.055);
+  --card-locked-text:       rgba(244, 228, 238, 0.18);
+
+  /* ── Toast ───────────────────────────────────────────── */
+  --toast-success-bg:       rgba(130, 40, 80, 0.95);
+  --toast-info-bg:          rgba(40,  30, 70, 0.95);
+  --toast-warning-bg:       rgba(110, 60, 20, 0.95);
+
+  /* ── Tipografía ──────────────────────────────────────── */
+  --font-sans:              'DM Sans', system-ui, sans-serif;
+  --font-serif:             'DM Serif Display', Georgia, serif;
+
+  --text-xs:                0.69rem;
+  --text-sm:                0.80rem;
+  --text-base:              1.00rem;
+  --text-lg:                1.15rem;
+  --text-hero:              clamp(1.9rem, 5vw, 3.1rem);
+
+  /* ── Espaciado ───────────────────────────────────────── */
+  --space-1:   4px;
+  --space-2:   8px;
+  --space-3:  12px;
+  --space-4:  16px;
+  --space-5:  24px;
+  --space-6:  32px;
+  --space-7:  48px;
+  --space-8:  64px;
+
+  /* ── Bordes ──────────────────────────────────────────── */
+  --radius-sm:  8px;
+  --radius-md: 10px;
+  --radius-lg: 12px;
+
+  /* ── Transiciones ────────────────────────────────────── */
+  --t-fast:     0.15s ease;
+  --t-base:     0.20s ease;
+  --t-slow:     0.35s ease;
+  --t-progress: 0.70s ease;
+
+  /* ── Efecto nebulosa  ────────────────────────── */
+  --nebula-size: 540px;
+  --nebula-offset: -270px;
+}

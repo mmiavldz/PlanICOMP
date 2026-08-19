@@ -1,0 +1,89 @@
+
+#starfield {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+
+.nebula-ambient {
+  position: fixed;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+  animation: nebula-breathe ease-in-out infinite;
+}
+
+.nebula-ambient--top {
+  top: -18%;
+  right: -12%;
+  width: 700px;
+  height: 700px;
+  background: radial-gradient(circle, rgba(157, 47, 92, 0.12) 0%, transparent 62%);
+  animation-duration: 10s;
+}
+
+.nebula-ambient--bottom {
+  bottom: -22%;
+  left: -10%;
+  width: 750px;
+  height: 750px;
+  background: radial-gradient(circle, rgba(80, 20, 110, 0.09) 0%, transparent 62%);
+  animation-duration: 14s;
+  animation-delay: -5s;
+}
+
+@keyframes nebula-breathe {
+  0%,  100% { opacity: 0.60; transform: scale(1.00); }
+  50%        { opacity: 1.00; transform: scale(1.07); }
+}
+
+
+#nebula-cursor {
+  position: fixed;
+  top:  var(--nebula-offset);
+  left: var(--nebula-offset);
+  width:  var(--nebula-size);
+  height: var(--nebula-size);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 1;
+  background: radial-gradient(circle,
+    var(--color-rose-glow)      0%,
+    var(--color-rose-glow-soft) 30%,
+    rgba(90, 20, 70, 0.05)      55%,
+    transparent                 70%
+  );
+  will-change: transform;
+}
+
+
+#nebula-cursor::after {
+  content: '';
+  position: absolute;
+  top:  50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width:  110px;
+  height: 110px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(232, 115, 154, 0.28) 0%, transparent 70%);
+}
+
+
+#cursor-dot {
+  position: fixed;
+  top:  -3px;
+  left: -3px;
+  width:  6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--color-rose-bright);
+  box-shadow: 0 0 8px rgba(232, 115, 154, 0.80);
+  pointer-events: none;
+  z-index: 9999;
+  will-change: transform;
+}
